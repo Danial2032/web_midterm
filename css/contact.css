@@ -1,0 +1,28 @@
+.contact-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: var(--dark-color);
+}
+
+.schedule-table {
+  background-color: #ffffff;
+}
+
+.schedule-table thead {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background-color: var(--light-color);
+}
+
+.schedule-table tbody tr:hover {
+  background-color: #e9ecef;
+}

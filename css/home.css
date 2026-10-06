@@ -1,0 +1,12 @@
+.hero-section {
+    background-color: var(--light-color);
+    padding: 60px 0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.feature-box {
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    text-align: center;
+}
