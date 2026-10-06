@@ -25,10 +25,6 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.courses-grid > div:nth-child(even) .course-card {
-    background-color: var(--light-color, #f8f9fa);
-}
-
 .course-level {
     display: inline-block;
     margin-bottom: 12px;
