@@ -19,10 +19,6 @@
   color: #ffffff;
 }
 
-.schedule-table tbody tr:nth-child(even) {
-  background-color: var(--light-color);
-}
-
 .schedule-table tbody tr:hover {
   background-color: #e9ecef;
 }
