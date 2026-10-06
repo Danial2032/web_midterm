@@ -8,7 +8,11 @@ This is the web-site with online web courses. Web-site shows available courses a
 
 Features implemented:
 
+The project uses 5 web pages with their own css. It is possible to use navigation on the top to select the web-page. 
+
 Technologies used: 
+
+Project uses HTML and CSS files. It uses Bootstrap, Media queries and Flexbox. Bootstrap is used for simplyfying css structure by using bootstrap css. Media queries are used to make web-site readable in mobile phones, tablets and laptops. Flexbox is used to create boxes that use space effectively. 
 
 Individual contribution of each group member:
 
