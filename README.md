@@ -2,7 +2,7 @@
 
 # Online web courses
 
-Alibayev Danial, Aben Aibar, Aidynyli Mahambet
+Alibayev Danial, Aben Aibar, Aidynuly Mahambet
 
 This is the web-site with online web courses. Web-site shows available courses and displays info about the instructors.
 
@@ -24,7 +24,7 @@ Created index and about html files and base, home, about css files.
 
 Created courses html and css files. 
 
-3) Aidynyli Mahambet
+3) Aidynuly Mahambet
 
 Created blog, contact html and css files.
 
