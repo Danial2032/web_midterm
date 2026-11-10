@@ -32,7 +32,7 @@
 <div class="blog-grid">
   <article class="blog-card">
     
-    <img src="images/web1.jpeg" alt="Web Design Trends" loading="lazy">
+    <img src="images/web1.jpeg" class="gallery-img" alt="Web Design Trends" loading="lazy">
     <div class="blog-card-content">
       <h3>2026 Web Design Trends</h3>
       <p>Discover the latest techniques in CSS and responsive layouts.</p>
@@ -41,7 +41,7 @@
   </article>
 
   <article class="blog-card">
-    <img src="images/web2.jpeg" alt="Student Portfolio" loading="lazy">
+    <img src="images/web2.jpeg" class="gallery-img" alt="Student Portfolio" loading="lazy">
     <div class="blog-card-content">
       <h3>Featured Student Portfolio</h3>
       <p>Check out the amazing midterm projects built by our top students.</p>
@@ -50,7 +50,7 @@
   </article>
 
   <article class="blog-card">
-    <img src="images/web3.jpeg" alt="Bootstrap Tips" loading="lazy">
+    <img src="images/web3.jpeg" class="gallery-img" alt="Bootstrap Tips" loading="lazy">
     <div class="blog-card-content">
       <h3>Mastering Bootstrap</h3>
       <p>Learn how to use utility classes and grids to speed up your workflow.</p>
@@ -60,11 +60,32 @@
 </div>
 </main>
 
+<div id="lightbox" class="modal bg-dark bg-opacity-75" tabindex="-1">
+  <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
+    <div class="row w-100 align-items-center justify-content-center">
+      <div class="col-auto">
+        <button type="button" id="prevBtn" class="btn btn-light fs-4">&laquo;</button>
+      </div>
+      <div class="col-8 col-md-6 text-center">
+        <div class="text-end mb-2">
+          <button type="button" id="closeBtn" class="btn btn-light btn-sm">&times; Close</button>
+        </div>
+        <img id="lightboxImg" src="" alt="Gallery Image" class="img-fluid rounded w-100 shadow">
+      </div>
+      <div class="col-auto">
+        <button type="button" id="nextBtn" class="btn btn-light fs-4">&raquo;</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer class="text-center">
 <div class="container">
 <p>Contact: info@eduacademy.com | Phone: +87779777765</p>
 </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/blog_script.js"></script>
 </body>
-</html> 
+</html>
