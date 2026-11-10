@@ -31,9 +31,24 @@
             <p>Choose a course and start learning practical digital skills at your own pace.</p>
         </section>
 
+        <div class="container mb-4">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <input type="text" id="searchInput" class="form-control form-control-lg mb-3" placeholder="Search courses by title or description...">
+                    <div class="d-flex justify-content-center flex-wrap gap-2 filter-buttons">
+                        <button class="btn btn-outline-primary active" data-category="all">All</button>
+                        <button class="btn btn-outline-primary" data-category="beginner">Beginner</button>
+                        <button class="btn btn-outline-primary" data-category="intermediate">Intermediate</button>
+                        <button class="btn btn-outline-primary" data-category="advanced">Advanced</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <section class="container mb-5" aria-label="Available courses">
-            <div class="row g-4 courses-grid">
-                <div class="col-md-6 col-lg-4">
+            <div class="row g-4 courses-grid" id="courseGrid">
+                
+                <div class="col-md-6 col-lg-4 course-item" data-category="beginner">
                     <article class="course-card">
                         <span class="course-level">Beginner</span>
                         <h2>Web Development</h2>
@@ -41,7 +56,8 @@
                         <a href="contact.html" class="btn btn-outline-primary btn-sm">Ask about this course</a>
                     </article>
                 </div>
-                <div class="col-md-6 col-lg-4">
+
+                <div class="col-md-6 col-lg-4 course-item" data-category="beginner">
                     <article class="course-card">
                         <span class="course-level">Beginner</span>
                         <h2>UI/UX Design</h2>
@@ -49,14 +65,19 @@
                         <a href="contact.html" class="btn btn-outline-primary btn-sm">Ask about this course</a>
                     </article>
                 </div>
-                <div class="col-md-6 col-lg-4">
+
+                <div class="col-md-6 col-lg-4 course-item" data-category="intermediate">
                     <article class="course-card">
-                        <span class="course-level">Beginner</span>
+                        <span class="course-level">Intermediate</span>
                         <h2>Python Programming</h2>
-                        <p>Get started with Python syntax and the building blocks of programming.</p>
+                        <p>Get started with Python syntax, data structures, and automation.</p>
                         <a href="contact.html" class="btn btn-outline-primary btn-sm">Ask about this course</a>
                     </article>
-                </div>
+                </div> 
+            </div>
+
+            <div id="noResults" class="text-center text-muted mt-4" style="display: none;">
+                <p>No courses match your search or filter criteria.</p>
             </div>
         </section>
     </main>
@@ -67,5 +88,7 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/search.js"></script>
 </body>
-</html> 
+</html>
