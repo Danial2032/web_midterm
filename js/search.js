@@ -1,29 +1,36 @@
 $(document).ready(function () {
     let currentCategory = 'all';
 
-    $('.filter-buttons .btn').on('click', function () {
-        $('.filter-buttons .btn').removeClass('active');
+    const $filterButtons = $('.filter-buttons .btn');
+    const $searchInput = $('#searchInput');
+    const $courseItems = $('.course-item');
+    const $noResults = $('#noResults');
+
+    $filterButtons.on('click', function () {
+        $filterButtons.removeClass('active');
         $(this).addClass('active');
 
         currentCategory = $(this).data('category');
         filterContent();
     });
 
-    $('#searchInput').on('input', function () {
+    $searchInput.on('input', function () {
         filterContent();
     });
 
     function filterContent() {
-        const searchQuery = $('#searchInput').val().toLowerCase().trim();
+        const searchQuery = $searchInput.val().toLowerCase().trim();
         let visibleCount = 0;
 
-        $('.course-item').each(function () {
+        $courseItems.each(function () {
             const $item = $(this);
             const itemCategory = $item.data('category');
-            const itemText = $item.text().toLowerCase();
+            
+            const titleText = $item.find('h2').text().toLowerCase();
+            const descText = $item.find('p').text().toLowerCase();
 
             const matchesCategory = (currentCategory === 'all' || itemCategory === currentCategory);
-            const matchesSearch = itemText.includes(searchQuery);
+            const matchesSearch = titleText.includes(searchQuery) || descText.includes(searchQuery);
 
             if (matchesCategory && matchesSearch) {
                 $item.show();
@@ -34,9 +41,9 @@ $(document).ready(function () {
         });
 
         if (visibleCount === 0) {
-            $('#noResults').show();
+            $noResults.show();
         } else {
-            $('#noResults').hide();
+            $noResults.hide();
         }
     }
 });
