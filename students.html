@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduAcademy - Student Records</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/students.css">
+</head>
+<body>
+    <header class="py-2">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand fs-3" href="index.html">EduAcademy</a>
+            <nav aria-label="Main navigation">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="students.html">Students</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <section class="students-intro text-center mb-4">
+            <h1>Student Records</h1>
+            <p class="text-muted mb-0">Add, review, update, or remove student course records.</p>
+        </section>
+
+        <section class="student-form-card p-4 mb-4">
+            <h2 id="formTitle" class="h4 mb-3">Add a student</h2>
+            <form id="studentForm" novalidate>
+                <input type="hidden" id="studentId">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label for="studentName" class="form-label">Full name</label>
+                        <input type="text" class="form-control" id="studentName" autocomplete="name" required>
+                        <div class="invalid-feedback" id="studentNameError"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="studentEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="studentEmail" autocomplete="email" required>
+                        <div class="invalid-feedback" id="studentEmailError"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="studentCourse" class="form-label">Course</label>
+                        <select class="form-select" id="studentCourse" required>
+                            <option value="">Choose a course</option>
+                            <option>Web Development</option>
+                            <option>UI/UX Design</option>
+                            <option>Python Programming</option>
+                        </select>
+                        <div class="invalid-feedback" id="studentCourseError"></div>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap gap-2 mt-4">
+                    <button type="submit" id="saveStudentButton" class="btn btn-primary">Add student</button>
+                    <button type="button" id="cancelEditButton" class="btn btn-outline-secondary" hidden>Cancel edit</button>
+                </div>
+                <p id="studentFormStatus" class="form-status mt-3 mb-0" role="status"></p>
+            </form>
+        </section>
+
+        <section aria-labelledby="recordsTitle">
+            <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-2">
+                <div>
+                    <h2 id="recordsTitle" class="h4 mb-1">Current students</h2>
+                    <p class="text-muted small mb-0">Changes are saved in this browser on this device.</p>
+                </div>
+                <p id="studentCount" class="text-muted mb-0"></p>
+            </div>
+            <div class="table-responsive student-table-wrap">
+                <table class="table table-striped table-hover align-middle mb-0">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Course</th>
+                            <th scope="col" class="actions-heading">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center">
+        <div class="container">
+            <p>Contact: info@eduacademy.com | Phone: +87779777765</p>
+        </div>
+    </footer>
+
+    <script src="js/students.js"></script>
+</body>
+</html>
