@@ -1,0 +1,48 @@
+.students-intro {
+    max-width: 760px;
+    margin-inline: auto;
+}
+
+.student-form-card,
+.student-table-wrap {
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    background-color: #fff;
+}
+
+.student-form-card {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.student-table-wrap {
+    overflow: hidden;
+}
+
+.student-table-wrap thead {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.student-table-wrap thead th {
+    white-space: nowrap;
+}
+
+.actions-heading {
+    min-width: 170px;
+}
+
+.student-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.form-status:empty {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .student-form-card {
+        padding: 1.25rem !important;
+    }
+}
