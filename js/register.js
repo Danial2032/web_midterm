@@ -58,6 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
             setError(passwordInput, passwordError, 'Password is required.');
             updateStrengthMeter(0, '', '');
             return false;
+        } else if (val.length < 6) {
+            setError(passwordInput, passwordError, 'Password must be at least 6 characters long.');
+            checkPasswordStrength(val);
+            return false;
         } else {
             setSuccess(passwordInput, passwordError);
             checkPasswordStrength(val);
@@ -84,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateStrengthMeter(width, text, color) {
         strengthBar.style.width = width + '%';
         strengthBar.style.backgroundColor = color;
-        strengthText.textContent = text ? Password Strength: ${text} : '';
+        strengthText.textContent = text ? `Password Strength: ${text}` : '';
         strengthText.style.color = color;
     }
 
@@ -116,8 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
         errorEl.textContent = '';
     }
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
 
         const isNameValid = validateName();
         const isEmailValid = validateEmail();
@@ -127,8 +131,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isNameValid && isEmailValid && isPasswordValid && isConfirmValid) {
             formSuccess.textContent = 'Registration successful! Welcome to EduAcademy.';
             form.reset();
+            
             [fullNameInput, emailInput, passwordInput, confirmPasswordInput].forEach(inp => inp.classList.remove('is-valid'));
             updateStrengthMeter(0, '', '');
+            
+            setTimeout(() => {
+                formSuccess.textContent = '';
+            }, 4000);
         } else {
             formSuccess.textContent = '';
         }
