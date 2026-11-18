@@ -8,7 +8,7 @@ This is the web-site with online web courses. Web-site shows available courses a
 
 Features implemented:
 
-The project uses 7 web pages with their own css. It is possible to use navigation on the top to select the web-page. Registration and table with CRUD. 
+The project uses 7 web pages with their own css. It is possible to use navigation on the top to select the web-page. Registration and table with CRUD.Sign in  
 
 Technologies used: 
 
@@ -18,15 +18,15 @@ Individual contribution of each group member:
 
 1) Alibayev Danial:
 
-Created index and about, register html files and base, home, about, register css files. Created register.js and search.js.
+Created index and about, register html files and base, home, about, register css files. Created register.js and search.js. Created site.js and auth-theme.js.
 
 2) Aben Aibar
 
-Created courses, students html and css files. Created students.js
+Created courses, students html and css files. Created students.js. Created learning_books_api.js.
 
 3) Aidynuly Makhambet
 
-Created blog, contact html and css files. Created blog_script.js.
+Created blog, contact html and css files. Created blog_script.js. Created faq.js.
 
 Link:
 
