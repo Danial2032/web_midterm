@@ -82,6 +82,49 @@
                 <p>No courses match your search or filter criteria.</p>
             </div>
         </section>
+
+        <section class="container mb-5 learning-library" id="learningLibrary" aria-labelledby="learningLibraryTitle">
+            <div class="learning-library-header">
+                <div>
+                    <p class="learning-eyebrow">LIVE PUBLIC API</p>
+                    <h2 id="learningLibraryTitle">Explore Learning Books</h2>
+                    <p class="text-muted mb-0">Discover books related to your studies using live results from
+                        <a href="https://openlibrary.org/" target="_blank" rel="noopener noreferrer">Open Library</a>.
+                        These are external reading resources, not EduAcademy courses.</p>
+                </div>
+            </div>
+
+            <form id="bookSearchForm" class="row g-3 align-items-end" role="search">
+                <div class="col-md-4">
+                    <label for="bookTopic" class="form-label">Course topic</label>
+                    <select id="bookTopic" class="form-select">
+                        <option value="web development">Web Development</option>
+                        <option value="user experience design">UI/UX Design</option>
+                        <option value="python programming">Python Programming</option>
+                        <option value="">All topics</option>
+                    </select>
+                </div>
+                <div class="col-md-5">
+                    <label for="bookKeywords" class="form-label">Additional keywords (optional)</label>
+                    <input type="search" id="bookKeywords" class="form-control" maxlength="80"
+                           placeholder="e.g. JavaScript, accessibility" autocomplete="off">
+                </div>
+                <div class="col-md-3">
+                    <div class="d-flex gap-2">
+                        <button id="bookSearchButton" type="submit" class="btn btn-primary flex-fill">Search books</button>
+                        <button id="bookRefreshButton" type="button" class="btn btn-outline-primary">Refresh</button>
+                    </div>
+                </div>
+            </form>
+
+            <p id="bookStatus" class="learning-status mt-3 mb-3" role="status" aria-live="polite">
+                Loading learning resources…
+            </p>
+            <div id="bookResults" class="row g-3" aria-label="Book search results"></div>
+            <p class="learning-api-credit small text-muted mb-0">Book metadata provided by
+                <a href="https://openlibrary.org/developers/api" target="_blank" rel="noopener noreferrer">Open Library API</a>.
+                Availability and catalog details are managed by Open Library.</p>
+        </section>
     </main>
 
     <footer class="text-center">
@@ -92,5 +135,6 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/learning_books_api.js" defer></script>
 </body>
 </html>
