@@ -50,7 +50,7 @@
             !user ||
             typeof user.name !== 'string' ||
             typeof user.email !== 'string' ||
-            !/^[^\s@]+@[^\s@]+\.[^\s@]+\.[^\s@]+$/.test(user.email)
+            !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(user.email)
         ) {
             return false;
         }
