@@ -74,3 +74,58 @@ footer a:focus {
     font-size: 12px;
     border-radius: var(--border-radius);
 }
+
+header .container { flex-wrap: wrap; gap: 0.6rem; }
+header nav .nav { justify-content: center; flex-wrap: wrap; }
+.eduacademy-toolbar { margin-left: auto; }
+#navUsername { max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+body.dark-theme {
+    --dark-color: #e9edf4;
+    --light-color: #222a35;
+    --secondary-color: #aebacf;
+    --bs-body-bg: #121820;
+    --bs-body-color: #e9edf4;
+    color-scheme: dark;
+}
+body.dark-theme { background: #121820; color: #e9edf4; }
+body.dark-theme header { background: #1b2634; border-color: #38465b; }
+body.dark-theme .nav-link { color: #e9edf4 !important; }
+body.dark-theme .nav-link:hover,
+body.dark-theme .nav-link.active { color: #8dbbff !important; }
+body.dark-theme .navbar-brand { color: #8dbbff !important; }
+body.dark-theme footer { background: #0e131b; color: #f3f6fb; }
+body.dark-theme .hero-section,
+body.dark-theme .bg-light,
+body.dark-theme .learning-library,
+body.dark-theme .relative-box { background: #1a2431 !important; border-color: #3c4b5d !important; color: #e9edf4 !important; }
+body.dark-theme .course-card,
+body.dark-theme .team-member,
+body.dark-theme .feature-box,
+body.dark-theme .blog-card,
+body.dark-theme .contact-form,
+body.dark-theme .register-card,
+body.dark-theme .student-form-card,
+body.dark-theme .student-table-wrap,
+body.dark-theme .learning-book-card {
+    background: #202c3b !important;
+    color: #e9edf4 !important;
+    border-color: #405168 !important;
+}
+body.dark-theme .course-card h2,
+body.dark-theme .learning-book-content h3 { color: #e9edf4 !important; }
+body.dark-theme .course-level { background: #253c55; color: #afceff; }
+body.dark-theme .form-control,
+body.dark-theme .form-select { background-color: #182331; color: #f1f5fb; border-color: #485b73; }
+body.dark-theme .form-control::placeholder { color: #b1bed0; }
+body.dark-theme .table { --bs-table-bg: #202c3b; --bs-table-color: #e9edf4; --bs-table-border-color: #4b5a6c; }
+body.dark-theme .table-striped { --bs-table-striped-bg: #29384a; --bs-table-striped-color: #f1f5fb; }
+body.dark-theme .table-hover { --bs-table-hover-bg: #34455b; --bs-table-hover-color: #fff; }
+body.dark-theme a:not(.btn):not(.nav-link):not(.navbar-brand) { color: #99c5ff; }
+body.dark-theme .text-muted { color: #b6c3d3 !important; }
+body.dark-theme .learning-book-cover-placeholder { background: #29394d; }
+body.dark-theme .faq-answer { border-color: #405168; }
+@media(max-width: 750px) {
+    header .container { justify-content: center !important; }
+    .eduacademy-toolbar { margin-left: 0; justify-content: center; }
+}
