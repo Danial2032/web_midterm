@@ -31,3 +31,9 @@
     width: 0%;
     transition: width 0.3s ease, background-color 0.3s ease;
 }
+
+.faq-item + .faq-item { margin-top: 10px; }
+.faq-question { min-height: 44px; }
+.faq-indicator { font-size: 1.35rem; font-weight: 700; flex-shrink: 0; }
+.faq-answer { border: 1px solid #dee2e6; border-top: 0; border-radius: 0 0 6px 6px; }
+#signInMessage:empty, #formSuccess:empty { display: none; }
